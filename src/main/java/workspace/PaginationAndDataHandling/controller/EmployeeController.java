@@ -30,7 +30,7 @@ public class EmployeeController {
 
         PageRequest pageRequest = PageRequest.of(pageNumber, pageSize, sort);
 
-        List<Employee> employees = employeeService.fetchAllEmployees(pageRequest);
+        List<Employee> employees = employeeService.fetchAllEmployees(pageRequest, search);
         return ResponseEntity.ok().body(employees);
     }
 
